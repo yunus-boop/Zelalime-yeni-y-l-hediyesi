@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yeni Yılın Kutlu Olsun ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255,0,0,0.3);
+    max-width: 350px;
+}
+
+h1 {
+    color: #ff4d6d;
+}
+
+.heart {
+    font-size: 50px;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.snow {
+    position: fixed;
+    top: -10px;
+    color: white;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to { transform: translateY(110vh); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="heart">❤️</div>
+    <h1>Yeni Yılın Kutlu Olsun</h1>
+    <p>
+        Seni tanıdığım için çok şanslıyım.<br>
+        Hayatıma kattığın her şey için teşekkür ederim.<br><br>
+        <strong>Seni çok seviyorum ❤️</strong>
+    </p>
+    <p>— Yunus</p>
+</div>
+
+<script>
+for(let i=0;i<40;i++){
+    let snow = document.createElement("div");
+    snow.className = "snow";
+    snow.innerHTML = "❄️";
+    snow.style.left = Math.random()*100 + "vw";
+    snow.style.animationDuration = (Math.random()*3 + 2) + "s";
+    snow.style.fontSize = (Math.random()*20 + 10) + "px";
+    document.body.appendChild(snow);
+}
+</script>
+
+</body>
+</html>
